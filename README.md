@@ -1,5 +1,7 @@
 # Générateur de lettre de contestation d'amende
 
+![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-26%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/lettre-contestation-amende)
+
 Développé et maintenu par [Lexio](https://lexio.rent), le logiciel de location de voiture et d'utilitaire pour loueurs professionnels.
 
 Moteur TypeScript pur, sans dépendance, du générateur de lettres de contestation d'amende de Lexio : voies de recours, délais, barèmes, gabarits de courrier et garde-fous, sous forme de fonctions **pures** (pas de DOM, pas d'état, pas d'horloge — la date du courrier est toujours une donnée de saisie, jamais `new Date()`), donc rejouables et testables sans framework.
