@@ -1,0 +1,36 @@
+{
+  "name": "@lexio/lettre-contestation-amende",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Moteur de génération de lettres de contestation d'amende (avis de contravention, amende forfaitaire majorée, forfait de post-stationnement) : voies de recours, délais, barèmes, consignation, désignation du conducteur par un loueur (art. L. 121-6 du code de la route). Fonctions pures, sans dépendance.",
+  "keywords": [
+    "contestation",
+    "amende",
+    "contravention",
+    "fps",
+    "forfait-post-stationnement",
+    "antai",
+    "requete-en-exoneration",
+    "reclamation",
+    "rapo",
+    "designation-conducteur",
+    "L121-6",
+    "code-de-la-route",
+    "loueur",
+    "location-vehicule",
+    "consignation",
+    "delais"
+  ],
+  "repository": "https://github.com/lexio-rent-git/lettre-contestation-amende",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}
