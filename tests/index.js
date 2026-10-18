@@ -7,3 +7,4 @@
 // rejoués normalement. `node --test tests/contestation.test.ts` et
 // `node --test "tests/*.test.ts"` restent également utilisables.
 import "./contestation.test.ts";
+import "./cli.test.ts";

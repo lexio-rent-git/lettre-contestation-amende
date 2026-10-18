@@ -27,10 +27,14 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "bin": {
+    "lettre": "./src/cli.ts"
+  },
   "engines": {
     "node": ">=22.6.0"
   },
   "scripts": {
-    "test": "node --test tests/"
+    "test": "node --test tests/",
+    "lettre": "node src/cli.ts"
   }
 }

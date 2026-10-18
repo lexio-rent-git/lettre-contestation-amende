@@ -1,6 +1,6 @@
 # Générateur de lettre de contestation d'amende
 
-![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-26%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/lettre-contestation-amende)
+![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-34%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/lettre-contestation-amende)
 
 Développé et maintenu par [Lexio](https://lexio.rent), le logiciel de location de voiture et d'utilitaire pour loueurs professionnels.
 
@@ -94,6 +94,25 @@ if (courrier) console.log(courrierEnTexte(courrier));
 ```
 
 Les champs non renseignés sont imprimés en pointillés : un gabarit vide reste un document utilisable au stylo (`specimens()` rend les onze modèles complets sous forme de données pures).
+
+## En ligne de commande et avec Docker
+
+Le dépôt fournit aussi un exécutable `lettre` (`src/cli.ts`), sans dépendance :
+
+```bash
+node src/cli.ts modeles                                   # les 12 modèles de courrier
+node src/cli.ts saisie b1-locataire > saisie.json         # saisie vierge à compléter
+node src/cli.ts courrier saisie.json                      # la lettre, prête à imprimer
+node src/cli.ts echeance --depart 2026-03-01 --delai exoneration
+# Former une requête en exonération : au plus tard le 2026-04-15
+node src/cli.ts formulations "Je reconnais avoir stationné cinq minutes."
+```
+
+La même chose sans installer Node, avec l'image Docker [`lexiorent/lettre-contestation-amende`](https://hub.docker.com/r/lexiorent/lettre-contestation-amende) :
+
+```bash
+docker run --rm -i lexiorent/lettre-contestation-amende courrier - < saisie.json
+```
 
 ## API
 
