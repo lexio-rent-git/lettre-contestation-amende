@@ -30,6 +30,13 @@ import {
   type SousBranche,
 } from "./contestation-amende.ts";
 
+// Sortie coupée par le lecteur (`cli … | head`) : on s'arrête proprement au lieu
+// de lever une erreur EPIPE.
+process.stdout.on("error", (e: NodeJS.ErrnoException) => {
+  if (e.code === "EPIPE") process.exit(0);
+  throw e;
+});
+
 const VERSION_EN_LIGNE = "https://lexio.rent/outils/lettre-contestation-amende";
 
 const MODELES = (Object.keys(GABARITS) as SousBranche[]).filter((id) => VOIES[GABARITS[id].voie].genereUnCourrier);

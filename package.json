@@ -1,6 +1,6 @@
 {
   "name": "@lexio/lettre-contestation-amende",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "license": "MIT",
   "description": "Moteur de génération de lettres de contestation d'amende (avis de contravention, amende forfaitaire majorée, forfait de post-stationnement) : voies de recours, délais, barèmes, consignation, désignation du conducteur par un loueur (art. L. 121-6 du code de la route). Fonctions pures, sans dépendance.",
